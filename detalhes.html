@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta name="author" content="Rafaela Mesquita Gontijo">
+    <title>PORTAL DE GAMES</title>
+
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Font Awesome js -->
+    <script src="https://kit.fontawesome.com/15ec886c14.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header class="header container">
+
+        <nav class="navbar navbar-expand-xl navbar-dark bg-transparent">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-headphones"></i> PORTALGAMES
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </header>
+
+    <script>
+        const urlParams = new URLSearchParams(location.search);
+        let id = parseInt(urlParams.get('id'))
+        detalhes(id)
+    </script>
+
+    <main>
+
+        <!-- Jogos Detalhes -->
+        <div class="lancamento container">
+
+            <!-- Jogos Detalhes - Título -->
+            <h1 class="text-center">Mais Detalhes</h1>
+
+            <div class="row" id="detalhes"></div>
+
+            <div class="col">
+                <button type="button" onclick="detalhes(id)"><b>DETALHES </b></button>        
+            </div>
+
+
+
+        </div>
+
+        <!-- Sobre & Editorial -->
+        <div class="SobreEditorial container">
+            <div class="row">
+
+                <!-- Sobre -->
+                <section class="sobre col-lg-8 col-md-12 p-3">
+
+                    <!-- Sobre - Título -->
+                    <div class="sobreTit ml-0 row">
+                        <h2>Sobre</h2>
+                    </div>
+
+                    <!-- Sobre - Conteúdo -->
+                    <div class="sobreConteudo row">
+                        <p class="mr-4">O PORTALGAMES é um portal de games desenvolvido como um trabalho para a
+                            disciplina
+                            Desenvolvimento de Interfaces WEB do curso de Engenharia de Computação na PUC-MG - Campus
+                            Coração
+                            Eucarístico.</p>
+                    </div>
+
+                </section>
+
+                <!-- Editorial & Redes Sociais -->
+                <section class="EditorialRedes col-lg-4 col-md-12 p-3 pl-5">
+                    <!-- Editorial - Título -->
+                    <div class="editorialTit row">
+                        <h2>Editorial</h2>
+                    </div>
+
+                    <!-- Editorial - Conteúdo -->
+                    <div class="editorialConteudo row">
+                        <p>
+                            <i class="fas fa-user"></i>
+                            <b class="h6">Feito por: </b> Rafaela Mesquita Gontijo
+                        </p>
+                        <p>
+                            <i class="fas fa-tag"></i>
+                            <b class="h6">Matrícula: </b> 720667
+                        </p>
+                        <p>
+                            <i class="fas fa-clipboard"></i>
+                            <b class="h6">Curso: </b> Engenharia de Computação
+                        </p>
+                    </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="rodape container">
+        <article class="row text-center mx-3">
+            <p class="my-auto col-lg-10 col-md-8 col-sm-7 mx-auto">Copyright 2021 - Disciplina de Desenvolvimento de
+                Interfaces Web - <b>ICEI PUC Minas</b>
+            </p>
+            <p class="mx-auto my-auto col-lg-2 col-md-4 col-sm-3">
+                <b><i class="fas fa-headphones"></i> PORTALGAMES</b>
+            </p>
+        </article>
+    </footer>
+
+    <!--Script para uso da biblioteca de games-->
+    <script src="games.js"></script>
+
+</body>
+
+</html>
